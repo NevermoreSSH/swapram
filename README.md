@@ -1,6 +1,6 @@
 # Install Swap RAM
  ```html
-wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram
+wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram
   ```
 Then Just type command below
  ```html
