@@ -36,7 +36,7 @@ case $swap1 in
 1)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=512 count=1024k
+dd if=/dev/zero of=/swapfile bs=1024 count=524288
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
@@ -50,7 +50,7 @@ swapram
 2)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
@@ -64,7 +64,7 @@ swapram
 3)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=1024 count=2048k
+dd if=/dev/zero of=/swapfile bs=1024 count=2097152
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
@@ -78,7 +78,7 @@ swapram
 4)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=2048 count=2048k
+dd if=/dev/zero of=/swapfile bs=1024 count=4194304
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
