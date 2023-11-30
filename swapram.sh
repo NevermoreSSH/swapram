@@ -18,11 +18,11 @@ echo -e "\e[36m╘════════════════════�
 \033[1;37mTelegram : https://t.me/todfix667 \033[0m"
 echo -e ""
 echo -e "
- [\033[1;36m•1 \033[0m]  Add 512MB RAM
- [\033[1;36m•2 \033[0m]  Add 1GB RAM
- [\033[1;36m•3 \033[0m]  Add 2GB RAM
- [\033[1;36m•4 \033[0m]  Add 4GB RAM
- [\033[1;36m•5 \033[0m]  Disable Swap RAM
+ [\033[1;36m•1\033[0m]  Add 512MB RAM
+ [\033[1;36m•2\033[0m]  Add 1GB RAM
+ [\033[1;36m•3\033[0m]  Add 2GB RAM
+ [\033[1;36m•4\033[0m]  Add 4GB RAM
+ [\033[1;36m•5\033[0m]  Disable Swap RAM
  
 Notes: 
  - Please disable swap RAM first before you choose other swap RAM partition.
@@ -35,6 +35,7 @@ echo -e ""
 case $swap1 in
 1)
 clear
+echo -e "[ ${green}INFO${NC} ] Processing . . . "
 dd if=/dev/zero of=/swapfile bs=512 count=1024k
 mkswap /swapfile
 chown root:root /swapfile
@@ -48,6 +49,7 @@ swapram
 ;;
 2)
 clear
+echo -e "[ ${green}INFO${NC} ] Processing . . . "
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 mkswap /swapfile
 chown root:root /swapfile
@@ -61,6 +63,7 @@ swapram
 ;;
 3)
 clear
+echo -e "[ ${green}INFO${NC} ] Processing . . . "
 dd if=/dev/zero of=/swapfile bs=1024 count=2048k
 mkswap /swapfile
 chown root:root /swapfile
@@ -74,6 +77,7 @@ swapram
 ;;
 4)
 clear
+echo -e "[ ${green}INFO${NC} ] Processing . . . "
 dd if=/dev/zero of=/swapfile bs=2048 count=2048k
 mkswap /swapfile
 chown root:root /swapfile
