@@ -27,8 +27,8 @@ echo -e "
  [\033[1;36m•2 \033[0m]  Add 1GB RAM
  [\033[1;36m•3 \033[0m]  Add 2GB RAM
  [\033[1;36m•4 \033[0m]  Add 4GB RAM
- [\033[1;36m•5 \033[0m]  Disable Swap RAM"
-echo "
+ [\033[1;36m•5 \033[0m]  Disable Swap RAM
+ 
 Notes: 
  - Please disable swap RAM first before you choose other swap ram partition.
  - swap is only used when RAM is used up.
