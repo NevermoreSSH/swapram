@@ -35,9 +35,9 @@ Notes:
 echo ""
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
 echo ""
-read -p "Select From Options [ 1 - 99 ] :  " xcore
+read -p "Select From Options [ 1 - 99 ] :  " swap1
 echo -e ""
-case $xcore in
+case $swap1 in
 1)
 clear
 dd if=/dev/zero of=/swapfile bs=512 count=1024k
