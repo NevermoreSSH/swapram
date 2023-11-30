@@ -1,4 +1,4 @@
-# Install Swap RAM
+# Install SwapRAM
  ```html
 wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram
   ```
@@ -9,7 +9,7 @@ swapram
 
 ## Description : For VPS only!!!
 
- Swap RAM Options:
+ SwapRAM Options:
 - 512MB
 - 1GB
 - 2GB
