@@ -34,53 +34,49 @@ read -p "Select From Options [ 1 - 5 ] :  " swap1
 echo -e ""
 case $swap1 in
 1)
-clear
 dd if=/dev/zero of=/swapfile bs=512 count=1024k
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 1
+sleep 2
 swapram
 ;;
 2)
-clear
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 1
+sleep 2
 swapram
 ;;
 3)
-clear
 dd if=/dev/zero of=/swapfile bs=1024 count=2048k
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 1
+sleep 2
 swapram
 ;;
 4)
-clear
 dd if=/dev/zero of=/swapfile bs=2048 count=2048k
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 1
+sleep 2
 swapram
 ;;
 5)
 clear
 swapoff --all
-sleep 1
+sleep 2
 swapram
 ;;
 0)
