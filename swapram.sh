@@ -30,8 +30,8 @@ echo -e "
  [\033[1;36m•5 \033[0m]  Disable Swap RAM
  
 Notes: 
- - Please disable swap RAM first before you choose other swap ram partition.
- - swap is only used when RAM is used up.
+ - Please disable swap RAM first before you choose other swap RAM partition.
+ - Swap only used when RAM is used up.
 echo ""
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
 echo ""
