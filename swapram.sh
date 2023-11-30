@@ -40,7 +40,8 @@ chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 2
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 swapram
 ;;
 2)
@@ -50,7 +51,8 @@ chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 2
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 swapram
 ;;
 3)
@@ -60,7 +62,8 @@ chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 2
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 swapram
 ;;
 4)
@@ -70,12 +73,20 @@ chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
-sleep 2
+echo ""
+read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
 swapram
 ;;
 5)
 clear
 swapoff --all
+echo -e "[ ${green}INFO${NC} ] Processing . . . "
+echo ""
+sleep 4
+echo -e "[ ${green}INFO${NC} ] Done . . . "
+sleep 3
+echo ""
+echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
 sleep 2
 swapram
 ;;
@@ -86,8 +97,7 @@ menu
 *)
 clear
 echo -e "[ ${red}INFO${NC} ] Please enter an correct number . . . "
-#echo -e "\e[1;31m Please enter an correct number\e[1;31m"
 sleep 3
-xraychanger
+swapram
 ;;
 esac
