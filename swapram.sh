@@ -16,12 +16,7 @@ echo -e " \E[0;47;30m                 SWAP RAM                \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m
 \033[1;37mDNS Changer By NevermoreSSH\033[0m
 \033[1;37mTelegram : https://t.me/todfix667 \033[0m"
-dnsfile="/root/dns"
-if test -f "$dnsfile"; then
-udns=$(cat /root/dns)
 echo -e ""
-echo -e "   Active DNS : \033[1;37m$udns\033[0m"
-fi
 echo -e "
  [\033[1;36m•1 \033[0m]  Add 512MB RAM
  [\033[1;36m•2 \033[0m]  Add 1GB RAM
