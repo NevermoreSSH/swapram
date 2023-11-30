@@ -26,7 +26,7 @@ echo -e "
  
 Notes: 
  - Please disable swap RAM first before you choose other swap RAM partition.
- - Swap only used when RAM is used up.
+ - Swap only used when RAM is used up."
 echo ""
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
 echo ""
