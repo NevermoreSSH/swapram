@@ -12,7 +12,7 @@ NC='\e[0m'
 N='\e[0m'
 clear
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
-echo -e " \E[0;47;30m                 SWAP RAM                \E[0m"
+echo -e " \E[0;47;30m                 SWAP RAM                   \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m
 \033[1;37mDNS Changer By NevermoreSSH\033[0m
 \033[1;37mTelegram : https://t.me/todfix667 \033[0m"
@@ -34,6 +34,7 @@ read -p "Select From Options [ 1 - 5 ] :  " swap1
 echo -e ""
 case $swap1 in
 1)
+clear
 dd if=/dev/zero of=/swapfile bs=512 count=1024k
 mkswap /swapfile
 chown root:root /swapfile
@@ -41,10 +42,12 @@ chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
 echo ""
-read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
+sleep 2
 swapram
 ;;
 2)
+clear
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 mkswap /swapfile
 chown root:root /swapfile
@@ -52,10 +55,12 @@ chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
 echo ""
-read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
+sleep 2
 swapram
 ;;
 3)
+clear
 dd if=/dev/zero of=/swapfile bs=1024 count=2048k
 mkswap /swapfile
 chown root:root /swapfile
@@ -63,10 +68,12 @@ chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
 echo ""
-read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
+sleep 2
 swapram
 ;;
 4)
+clear
 dd if=/dev/zero of=/swapfile bs=2048 count=2048k
 mkswap /swapfile
 chown root:root /swapfile
@@ -74,13 +81,14 @@ chmod 0600 /swapfile >/dev/null 2>&1
 swapon /swapfile >/dev/null 2>&1
 sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
 echo ""
-read -p "$( echo -e "Press ${orange}[ ${NC}${green}Enter${NC} ${CYAN}]${NC} Back to menu . . .") "
+echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
+sleep 2
 swapram
 ;;
 5)
 clear
 swapoff --all
-echo -e "[ ${green}INFO${NC} ] Processing . . . "
+echo -e "[ ${green}INFO${NC} ] Disable Swap RAM . . . "
 echo ""
 sleep 4
 echo -e "[ ${green}INFO${NC} ] Done . . . "
