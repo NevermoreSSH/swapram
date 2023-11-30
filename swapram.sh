@@ -24,6 +24,8 @@ echo -e "
  [\033[1;36m•4\033[0m]  Add 4GB RAM
  [\033[1;36m•5\033[0m]  Disable Swap RAM
  
+ [\033[1;36m•0\033[0m]  Back to menu
+ 
 Notes: 
  - Please disable SwapRAM first before you choose other SwapRAM partition.
  - SwapRAM only used when RAM is used up."
