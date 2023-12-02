@@ -19,10 +19,11 @@ echo -e "\e[36m╘════════════════════�
 echo -e ""
 echo -e "
  [\033[1;36m•1\033[0m]  Add 512MB RAM
- [\033[1;36m•2\033[0m]  Add 1GB RAM
- [\033[1;36m•3\033[0m]  Add 2GB RAM
- [\033[1;36m•4\033[0m]  Add 4GB RAM
- [\033[1;36m•5\033[0m]  Disable Swap RAM
+ [\033[1;36m•2\033[0m]  Add 768MB RAM
+ [\033[1;36m•3\033[0m]  Add 1GB RAM
+ [\033[1;36m•4\033[0m]  Add 2GB RAM
+ [\033[1;36m•5\033[0m]  Add 4GB RAM
+ [\033[1;36m•6\033[0m]  Disable Swap RAM
  
  [\033[1;36m•0\033[0m]  Back to menu
  
@@ -52,7 +53,7 @@ swapram
 2)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+dd if=/dev/zero of=/swapfile bs=1024 count=786432
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
@@ -66,7 +67,7 @@ swapram
 3)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=1024 count=2097152
+dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
@@ -80,7 +81,7 @@ swapram
 4)
 clear
 echo -e "[ ${green}INFO${NC} ] Processing . . . "
-dd if=/dev/zero of=/swapfile bs=1024 count=4194304
+dd if=/dev/zero of=/swapfile bs=1024 count=2097152
 mkswap /swapfile
 chown root:root /swapfile
 chmod 0600 /swapfile >/dev/null 2>&1
@@ -92,6 +93,20 @@ sleep 2
 swapram
 ;;
 5)
+clear
+echo -e "[ ${green}INFO${NC} ] Processing . . . "
+dd if=/dev/zero of=/swapfile bs=1024 count=4194304
+mkswap /swapfile
+chown root:root /swapfile
+chmod 0600 /swapfile >/dev/null 2>&1
+swapon /swapfile >/dev/null 2>&1
+sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
+echo ""
+echo -e "[ ${green}INFO${NC} ] Back to menu . . . "
+sleep 2
+swapram
+;;
+6)
 clear
 swapoff --all
 echo -e "[ ${green}INFO${NC} ] Disable Swap RAM . . . "
