@@ -11,6 +11,7 @@ swapram
 
  SwapRAM Options:
 - 512MB
+- 768MB
 - 1GB
 - 2GB
 - 4GB
