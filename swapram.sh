@@ -33,7 +33,7 @@ Notes:
 echo ""
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
 echo ""
-read -p "Select From Options [ 1 - 5 ] :  " swap1
+read -p "Select From Options [ 1 - 6 ] :  " swap1
 echo -e ""
 case $swap1 in
 1)
